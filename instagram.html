@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RENTO Instagram Business Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background: #fafafa;
+      color: #262626;
+      display: flex;
+      justify-content: center;
+      padding: 20px 10px;
+      min-height: 100vh;
+      align-items: flex-start;
+    }
+    .profile-container {
+      width: 100%;
+      max-width: 600px;
+      background: #fff;
+      border: 1px solid #dbdbdb;
+      border-radius: 6px;
+      padding: 24px 32px 32px;
+    }
+    .header {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid transparent;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      padding: 3px;
+      box-sizing: content-box;
+    }
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      display: block;
+      object-fit: cover;
+      background: white;
+    }
+    .profile-info {
+      flex: 1;
+      min-width: 240px;
+    }
+    .top-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .business-name {
+      font-size: 1.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .verified-icon {
+      color: #3897f0; /* Instagram blue verified color */
+      font-size: 1.5rem;
+    }
+    .category {
+      margin-top: 4px;
+      font-size: 1rem;
+      color: #8e8e8e;
+      font-weight: 500;
+    }
+    .bio {
+      margin-top: 12px;
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #262626;
+    }
+    .follow-button {
+      margin-top: 18px;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      border: none;
+      border-radius: 6px;
+      color: white;
+      padding: 12px 26px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 2px 8px rgba(204, 35, 136, 0.6);
+      transition: filter 0.3s ease;
+    }
+    .follow-button:hover {
+      filter: brightness(1.1);
+    }
+    .highlights {
+      margin-top: 28px;
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: start;
+    }
+    .highlight {
+      text-align: center;
+      cursor: pointer;
+      max-width: 80px;
+      outline-offset: 2px;
+    }
+    .highlight:focus .highlight-icon {
+      box-shadow: 0 0 0 3px #cc1888;
+      outline: none;
+    }
+    .highlight-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #fafafa;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 8px;
+      font-size: 2rem;
+      color: #bc1888;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #bc1888;
+    }
+    .highlight-icon:hover {
+      background-color: #fce9f4;
+      box-shadow: 0 0 10px #bc1888;
+    }
+    .highlight-label {
+      font-size: 0.9rem;
+      color: #262626;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .posts {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 6px;
+    }
+    .post {
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
+      border-radius: 3px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #eee;
+      transition: filter 0.3s ease;
+    }
+    .post img {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .post:hover {
+      filter: brightness(0.85);
+    }
+    /* Responsive */
+    @media (max-width: 500px) {
+      .profile-container {
+        padding: 16px 16px 24px;
+      }
+      .profile-photo {
+        width: 110px;
+        height: 110px;
+      }
+      .highlight-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+        border-width: 1.5px;
+      }
+      .highlight {
+        max-width: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="profile-container" aria-label="RENTO Instagram Business Profile">
+    <section class="header">
+      <div class="profile-photo" aria-label="Profile photo of RENTO">
+        <img
+          src="assets/suv_10.webp"
+          alt="RENTO profile photo"
+          loading="lazy"
+          width="130"
+          height="130"
+        />
+      </div>
+      <div class="profile-info">
+        <div class="top-row">
+          <h1 class="business-name">
+            RENTO
+            <i class="ri-check-double-fill verified-icon" title="Verified Business" aria-hidden="true"></i>
+          </h1>
+          <button class="follow-button" aria-label="Follow RENTO on Instagram">Follow</button>
+        </div>
+        <div class="category" aria-label="Business Category">Car Rental Service</div>
+        <p class="bio">
+          Reliable car rental service with a wide range of vehicles. Easy booking, flexible plans, and excellent customer support. Drive with RENTO.
+        </p>
+      </div>
+    </section>
+
+    <section class="highlights" aria-label="Story Highlights">
+      <div class="highlight" tabindex="0" aria-label="Car fleet highlight">
+        <div class="highlight-icon">
+          <i class="ri-car-fill" aria-hidden="true"></i>
+        </div>
+        <div class="highlight-label">Cars</div>
+      </div>
+      <div class="highlight" tabindex="0" aria-label="Rental plans highlight">
+        <div class="highlight-icon">
+          <i class="ri-calendar-check-fill" aria-hidden="true"></i>
+        </div>
+        <div class="highlight-label">Plans</div>
+      </div>
+      <div class="highlight" tabindex="0" aria-label="Customer support highlight">
+        <div class="highlight-icon">
+          <i class="ri-headphone-fill" aria-hidden="true"></i>
+        </div>
+        <div class="highlight-label">Support</div>
+      </div>
+      <div class="highlight" tabindex="0" aria-label="Locations highlight">
+        <div class="highlight-icon">
+          <i class="ri-map-pin-2-fill" aria-hidden="true"></i>
+        </div>
+        <div class="highlight-label">Locations</div>
+      </div>
+    </section>
+
+    <section class="posts" aria-label="Posts gallery">
+      <article class="post" tabindex="0">
+        <img
+          src="assets/profile_6.avif"
+          alt="Porsche"
+          loading="lazy"
+          width="600"
+          height="600"
+        />
+      </article>
+      <article class="post" tabindex="0">
+        <img
+          src="assets/profile_7.avif"
+          alt="Luxury sedan on the road"
+          loading="lazy"
+          width="600"
+          height="600"
+        />
+      </article>
+      <article class="post" tabindex="0">
+        <img
+          src="assets/profile_5.avif"
+          alt="Couple getting in convertible"
+          loading="lazy"
+          width="600"
+          height="600"
+        />
+      </article>
+      <article class="post" tabindex="0">
+        <img
+          src="assets/story-1.jpg"
+          alt="Closeup of steering wheel and dashboard"
+          loading="lazy"
+          width="600"
+          height="600"
+        />
+      </article>
+      <article class="post" tabindex="0">
+        <img
+          src="assets/ev_6.avif"
+          alt="00"
+          loading="lazy"
+          width="600"
+          height="600"
+        />
+      </article>
+      <article class="post" tabindex="0">
+        <img
+          src="assets/cars_3.webp"
+          alt="oo"
+          loading="lazy"
+          width="600"
+          height="600"
+        />
+      </article>
+    </section>
+  </main>
+</body>
+</html>

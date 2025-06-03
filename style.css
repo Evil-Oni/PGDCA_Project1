@@ -460,7 +460,23 @@ nav {
 
 }
 
+  .review__btn {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
 
+    .review__btn .btn {
+        color: var(--text-dark);
+        background-color: var(--primary-color);
+    }
+
+    .review__btn .btn:hover{
+        color: var(--primary-color);
+        background-color: var(--text-dark);
+    }
 
 
 .download {

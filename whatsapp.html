@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RENTO - WhatsApp Business Profile</title>
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f0f2f5;
+      color: #202c33;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .profile-container {
+      background: #fff;
+      max-width: 450px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background: #25d366;
+      padding: 24px 20px 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      position: relative;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      background: white;
+    }
+
+    .business-name {
+      margin-top: 16px;
+      font-size: 1.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .verified-badge {
+      background-color: #4caf50;
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .verified-badge i {
+      font-size: 1.2rem;
+    }
+
+    .about-section {
+      margin: 24px 20px 8px 20px;
+      font-size: 1rem;
+      color: #4a4a4a;
+      line-height: 1.35;
+    }
+
+    .info-section {
+      margin: 0 20px 24px 20px;
+      font-size: 1rem;
+      color: #4a4a4a;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .info-item i {
+      flex-shrink: 0;
+      font-size: 1.3rem;
+      color: #25d366;
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .info-label {
+      font-weight: 600;
+      color: #202c33;
+      min-width: 110px;
+    }
+
+    .info-text {
+      flex: 1;
+      word-break: break-word;
+    }
+
+    .btn-send-message {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      background-color: #25d366;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(37, 211, 102, 0.5);
+      transition: background-color 0.3s ease;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      user-select: none;
+    }
+
+    .btn-send-message:hover {
+      background-color: #1da851;
+    }
+
+    .btn-send-message i {
+      font-size: 1.4rem;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      body {
+        padding: 10px;
+        align-items: stretch;
+      }
+      .profile-container {
+        max-width: 100%;
+      }
+      .business-name {
+        font-size: 1.5rem;
+      }
+      .about-section,
+      .info-section {
+        font-size: 0.95rem;
+      }
+      .btn-send-message {
+        font-size: 1rem;
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="profile-container" aria-label="WhatsApp Business Profile for RENTO">
+    <header class="header">
+      <img 
+        src="assets/suv_10.webp" 
+        alt="RENTO logo and profile photo" 
+        class="profile-pic" 
+        loading="lazy" 
+        width="120" height="120" />
+      <h1 class="business-name">
+        RENTO 
+        <span class="verified-badge" aria-label="Verified Business">
+          <i class="ri-verified-badge-line" style="color: skyblue;"></i>
+        </span>
+      </h1>
+    </header>
+
+    <p class="about-section">
+      Reliable car rental service with a wide range of vehicles to choose from. Book easily and drive your way.
+    </p>
+
+    <div class="info-section" role="list" aria-label="Business Information">
+      <div class="info-item" role="listitem">
+        <i class="ri-map-pin-2-fill" aria-hidden="true"></i>
+        <span class="info-label">Address:</span>
+        <span class="info-text">456 Auto Drive, Metropolis, MOHALI</span>
+      </div>
+      <div class="info-item" role="listitem">
+        <i class="ri-phone-line"></i>
+        <span class="info-label">Phone:</span>
+        <span class="info-text">+1 (800) 765-4321</span>
+      </div>
+      <div class="info-item" role="listitem">
+        <i class="ri-mail-fill" aria-hidden="true"></i>
+        <span class="info-label">Email:</span>
+        <span class="info-text">support@rento.com</span>
+      </div>
+      <div class="info-item" role="listitem">
+        <i class="ri-time-fill" aria-hidden="true"></i>
+        <span class="info-label">Business Hours:</span>
+        <span class="info-text">Mon-Sun: 8 AM - 10 PM</span>
+      </div>
+    </div>
+
+    <button class="btn-send-message" onclick="sendMessage()">
+      <i class="ri-message-2-fill"></i>
+      Send Message
+    </button>
+  </section>
+
+  <script>
+    function sendMessage() {
+      // Phone number in international format without + or spaces
+      const phoneNumber = "18007654321";
+      const url = `https://wa.me/${phoneNumber}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
+
